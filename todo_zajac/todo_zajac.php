@@ -7,3 +7,12 @@
  * Author: Bartlomiej Zajac
  * Author URI: http://bartholomewzajac.pl/
  */
+
+
+
+
+// add_action('wp_body_open', 'your_function');
+// $myText =  "workin";
+// function your_function() {
+    // echo $myText;
+// }
