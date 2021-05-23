@@ -30,7 +30,7 @@ require 'db_conntect.php';
             </form>
         </div>
         <?php
-        $todoList = $connect->query("SELECT * FROM todo ORDER BY id DESC");
+        $todoList = $connect->query("SELECT * FROM zajac199_todo.todolist ORDER BY id DESC");
         ?>
         <div class="bz-todo__list">
             <?php if ($todoList->rowCount() <= 0) { ?>
