@@ -24,7 +24,8 @@
         // Add styles and scipts
         add_action('wp_enqueue_scripts', array($this, 'load_assets'));
 
-        
+        // Load code
+        add_action('bz-todo', array($this, 'load_code'));
     }
 
     public function create_custom_post_type()
@@ -67,6 +68,11 @@
             1,
             true
         );
+    }
+
+    public function load_code()
+    {
+        return 'works';
     }
 
  }
