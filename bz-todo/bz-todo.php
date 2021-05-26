@@ -23,6 +23,8 @@
 
         // Add styles and scipts
         add_action('wp_enqueue_scripts', array($this, 'load_assets'));
+
+        
     }
 
     public function create_custom_post_type()
@@ -56,6 +58,14 @@
             array(),
             1,
             'all'
+        );
+        
+        wp_enqueue_script(
+            'bz-todo',
+            plugin_dir_url( __FILE__ ) . 'js/bz-todo.js',
+            array('jquery'),
+            1,
+            true
         );
     }
 
