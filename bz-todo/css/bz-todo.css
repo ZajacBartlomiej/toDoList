@@ -1,3 +1,48 @@
-/* body {
-    background-color: #9cb8d1 !important;
-} */
+.bz-todo__section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999999; /* that high number of z-index to be 100% sure that will be visible*/
+    background-color: #9cb8d1;
+}
+.bz-todo {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+.bz-todo__new {
+    display: flex;
+    align-items: center;
+}
+
+.bz-todo__enter {
+    float: left;
+}
+
+.bz-todo__checkbox {
+    float: left;
+    margin-right: 20px;
+}
+
+.bz-todo__input {
+    padding: 5px 10px;
+}
+
+
+
+.bz-todo__task {
+    margin: 5px 0;
+}
+.bz-todo__task--name {
+    padding: 5px 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.bz-todo__task--checked {
+    text-decoration: line-through;
+    color: #858585;
+}

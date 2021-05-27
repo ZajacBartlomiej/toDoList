@@ -19,37 +19,37 @@
     public function __construct()
     {
         // Add new CPT
-        add_action('init', array($this, 'create_custom_post_type'));
+        // add_action('init', array($this, 'create_custom_post_type'));
 
         // Add styles and scipts
         add_action('wp_enqueue_scripts', array($this, 'load_assets'));
 
         // Load code
-        add_action('bz-todo', array($this, 'load_code'));
+        // add_action('bz-todo', array($this, 'load_code'));
     }
 
-    public function create_custom_post_type()
-    {
+    // public function create_custom_post_type()
+    // {
         
-        $args = array(
+    //     $args = array(
 
-            'public' => true,
-            'has_archive' => true,
-            'supports' => array('title'),
-            'taxonomies' => array('topics', 'category' ),
-            'exclude_from_search' => true,
-            'publicly_queryable' => false,
-            'capability' => 'manage_options',
-            'labels' => array(
-                'name' => 'ToDo List',
-                'singular_name' => 'Task'
-            ),
-            'menu_icon' => 'dashicons-editor-ol',
-        );
+    //         'public' => true,
+    //         'has_archive' => true,
+    //         'supports' => array('title'),
+    //         'taxonomies' => array('topics', 'category' ),
+    //         'exclude_from_search' => true,
+    //         'publicly_queryable' => false,
+    //         'capability' => 'manage_options',
+    //         'labels' => array(
+    //             'name' => 'ToDo List',
+    //             'singular_name' => 'Task'
+    //         ),
+    //         'menu_icon' => 'dashicons-editor-ol',
+    //     );
 
-        register_post_type('ToDo List', $args);
+    //     register_post_type('ToDo List', $args);
 
-    }
+    // }
 
     public function load_assets()
     {
@@ -70,10 +70,10 @@
         );
     }
 
-    public function load_code()
-    {
-        return 'works';
-    }
+    // public function load_code()
+    // {
+    //     return 'works';
+    // }
 
  }
 
