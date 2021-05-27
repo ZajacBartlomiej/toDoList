@@ -5,28 +5,29 @@ $(document).ready(function() {
     body.prepend(`<section class="bz-todo__section">
                     <div id="todo" class="bz-todo todo" job="none">
                         <div class="bz-todo__new todo__new" job="none">
-                            <div class="bz-todo__checkbox todo__checkbox" job="none">
+                            <!--<div class="bz-todo__checkbox todo__checkbox" job="none">
                                 <input type="checkbox" class="todo__checkbox--unchecked" job="complete" isComplete="">
-                            </div>
+                            </div>-->
                             <div class="bz-todo__enter todo__name" job="none">
                                 <input type="text" placeholder="Enter new task here..." job="enter" class="bz-todo__input todo__input bz-todo__enter--input">
                             </div>
+                        </div>
+                        <div class="bz-todo--list">
+                        
                         </div>
                         
                     </div>
                 </section>`); 
 
     let ToDoLIST =[];
-
-    console.log(ToDoLIST);
     
     let id = 0;
     
-    $(".cart").append(ToDoLIST);
+    $(".bz-todo").append(ToDoLIST);
     
     let inputGet = document.querySelector('.bz-todo__enter--input');
     
-    const todo = document.getElementsByClassName("cart");
+    const todo = document.getElementsByClassName("bz-todo");
     
     const CHECK = "cart__checkbox--checked";
     const UNCHECK = "cart__checkbox--unchecked";
@@ -43,27 +44,26 @@ $(document).ready(function() {
     const CHECKBOX = done ? CHECKED : UNCHECKED;
     
     const text = `
-    <div class="row cart__task" job="none">
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 cart__checkbox" job="none">
-    <input type="checkbox" class="${DONE}" job="complete" number="${id}" ${CHECKBOX}/>
-    </div>
-    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 cart__name" job="none">
-    <input type="text" value="${task}" job="name" number="${id}" class="cart__input cart__input--task">
-    </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 cart__remove center" job="delete" number="${id}">
-    x
-    </div>
+    <div class="bz-todo__task cart__task" job="none">
+        <div class="cart__checkbox" job="none">
+            <input type="checkbox" class="${DONE}" job="complete" number="${id}" ${CHECKBOX}/>
+        </div>
+        <div class="cart__name" job="none">
+            <input type="text" value="${task}" job="name" number="${id}" class="bz-todo__input">
+        </div>
+        <div class="cart__remove center" job="delete" number="${id}">
+            x
+        </div>
     </div>
     `
-    $(".cart__tasks").prepend(text);
+    $(".bz-todo--list").prepend(text);
     }
 
 
     document.addEventListener("keypress", function(event) {
     
         if (event.key === "Enter") {
-          console.log("keypress");
-          
+
           const task = inputGet.value;
           
           if (task) {
@@ -92,11 +92,11 @@ $(document).ready(function() {
           
           var elementToCrossOut = document.querySelector('input[number="'+element+'"][job="name"]');
           
-          if (elementToCrossOut.getAttribute("style")=="text-decoration: line-through red;") {
-            // elementToCrossOut.style.textDecoration = "none";
-          } else {
-            // elementToCrossOut.style.textDecoration = "line-through red";
-          }        
+        //   if (elementToCrossOut.getAttribute("style")=="text-decoration: line-through red;") {
+        //     // elementToCrossOut.style.textDecoration = "none";
+        //   } else {
+        //     // elementToCrossOut.style.textDecoration = "line-through red";
+        //   }        
         }
         function removeItem( element ){
           element.parentNode.parentNode.removeChild(element.parentNode);
@@ -114,9 +114,10 @@ $(document).ready(function() {
           
         }
 
-        const list = document.getElementById('cart');
+        const list = document.getElementById('todo');
     
     list.addEventListener("click", function(event){
+        console.log('klik');
       let element = event.target;
       const elementJOB = element.attributes.job.value;
       if (elementJOB == "complete") {

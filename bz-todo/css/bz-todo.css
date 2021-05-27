@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .bz-todo__section {
     position: absolute;
     top: 0;
@@ -31,6 +35,14 @@
 .bz-todo__input {
     padding: 5px 10px;
 }
+
+.bz-todo__task {
+    display: flex;
+    align-items: center;
+}
+
+
+
 
 
 
