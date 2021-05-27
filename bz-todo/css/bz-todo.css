@@ -8,14 +8,19 @@ body {
     left: 0;
     height: 100vh;
     width: 100vw;
+    padding-top: 100px;
     z-index: 9999999999; /* that high number of z-index to be 100% sure that will be visible*/
-    background-color: #9cb8d1;
+    background-color: #fefff8;
 }
 .bz-todo {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 50px;
+}
+
+.bz-todo__title {
+    text-align: center;
 }
 
 .bz-todo__new {
@@ -30,9 +35,12 @@ body {
 .bz-todo__checkbox {
     float: left;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .bz-todo__input {
+    border: none;
+    background-color: unset;
     padding: 5px 10px;
 }
 
@@ -41,13 +49,17 @@ body {
     align-items: center;
 }
 
+.bz-todo__remove {
+    cursor: pointer;
+}
+
 
 
 
 
 
 .bz-todo__task {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 .bz-todo__task--name {
     padding: 5px 5px;

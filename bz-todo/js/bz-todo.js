@@ -3,12 +3,13 @@ $(document).ready(function() {
     var body = $('body');
 
     body.prepend(`<section class="bz-todo__section">
-                    <div id="todo" class="bz-todo todo" job="none">
-                        <div class="bz-todo__new todo__new" job="none">
+                    <h1 class="bz-todo__title">Your To Do List</h1>
+                    <div id="bz-todo" class="bz-todo" job="none">
+                        <div class="bz-todo__new" job="none">
                             <!--<div class="bz-todo__checkbox todo__checkbox" job="none">
                                 <input type="checkbox" class="todo__checkbox--unchecked" job="complete" isComplete="">
                             </div>-->
-                            <div class="bz-todo__enter todo__name" job="none">
+                            <div class="bz-todo__enter" job="none">
                                 <input type="text" placeholder="Enter new task here..." job="enter" class="bz-todo__input todo__input bz-todo__enter--input">
                             </div>
                         </div>
@@ -29,8 +30,8 @@ $(document).ready(function() {
     
     const todo = document.getElementsByClassName("bz-todo");
     
-    const CHECK = "cart__checkbox--checked";
-    const UNCHECK = "cart__checkbox--unchecked";
+    const CHECK = "bz-todo__done";
+    const UNCHECK = "bz-todo__undone";
     
     const CHECKED = "checked";
     const UNCHECKED = "";
@@ -44,14 +45,14 @@ $(document).ready(function() {
     const CHECKBOX = done ? CHECKED : UNCHECKED;
     
     const text = `
-    <div class="bz-todo__task cart__task" job="none">
-        <div class="cart__checkbox" job="none">
+    <div class="bz-todo__task" job="none">
+        <div class="bz-todo__checkbox" job="none">
             <input type="checkbox" class="${DONE}" job="complete" number="${id}" ${CHECKBOX}/>
         </div>
-        <div class="cart__name" job="none">
+        <div job="none">
             <input type="text" value="${task}" job="name" number="${id}" class="bz-todo__input">
         </div>
-        <div class="cart__remove center" job="delete" number="${id}">
+        <div class="bz-todo__remove" job="delete" number="${id}">
             x
         </div>
     </div>
@@ -114,7 +115,7 @@ $(document).ready(function() {
           
         }
 
-        const list = document.getElementById('todo');
+        const list = document.getElementById('bz-todo');
     
     list.addEventListener("click", function(event){
         console.log('klik');
