@@ -28,12 +28,7 @@ body {
     align-items: center;
 }
 
-.bz-todo__enter {
-    float: left;
-}
-
 .bz-todo__checkbox {
-    float: left;
     margin-right: 20px;
     cursor: pointer;
 }

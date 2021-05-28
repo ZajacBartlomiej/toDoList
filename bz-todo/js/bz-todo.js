@@ -6,9 +6,6 @@ $(document).ready(function() {
                     <h1 class="bz-todo__title">Your To Do List</h1>
                     <div id="bz-todo" class="bz-todo" job="none">
                         <div class="bz-todo__new" job="none">
-                            <!--<div class="bz-todo__checkbox todo__checkbox" job="none">
-                                <input type="checkbox" class="todo__checkbox--unchecked" job="complete" isComplete="">
-                            </div>-->
                             <div class="bz-todo__enter" job="none">
                                 <input type="text" placeholder="Enter new task here..." job="enter" class="bz-todo__input todo__input bz-todo__enter--input">
                             </div>
@@ -92,12 +89,7 @@ $(document).ready(function() {
           ToDoLIST[element].done = ToDoLIST[element].done ? false : true;
           
           var elementToCrossOut = document.querySelector('input[number="'+element+'"][job="name"]');
-          
-        //   if (elementToCrossOut.getAttribute("style")=="text-decoration: line-through red;") {
-        //     // elementToCrossOut.style.textDecoration = "none";
-        //   } else {
-        //     // elementToCrossOut.style.textDecoration = "line-through red";
-        //   }        
+              
         }
         function removeItem( element ){
           element.parentNode.parentNode.removeChild(element.parentNode);
