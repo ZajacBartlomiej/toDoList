@@ -47,7 +47,7 @@ $(document).ready(function() {
     const text = `
     <div class="bz-todo__task" job="none">
         <div class="bz-todo__checkbox" job="none">
-            <input type="checkbox" class="${DONE}" job="complete" number="${id}" ${CHECKBOX}/>
+            <input type="checkbox" class="bz-todo__status ${DONE}" job="complete" number="${id}" ${CHECKBOX}/>
         </div>
         <div job="none">
             <input type="text" value="${task}" job="name" number="${id}" class="bz-todo__input">

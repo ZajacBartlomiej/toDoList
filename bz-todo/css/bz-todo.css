@@ -50,23 +50,22 @@ body {
 }
 
 .bz-todo__remove {
+    padding: 5px 10px;
     cursor: pointer;
 }
 
+.bz-todo__status {
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none !important;
+    border: 1px solid black;
+    border-radius: 50%;
+}
 
-
-
-
+.bz-todo__done {
+    background-color: #4987be;
+}
 
 .bz-todo__task {
     margin: 10px 0;
-}
-.bz-todo__task--name {
-    padding: 5px 5px;
-    border: 1px solid #000;
-    border-radius: 5px;
-}
-.bz-todo__task--checked {
-    text-decoration: line-through;
-    color: #858585;
 }
